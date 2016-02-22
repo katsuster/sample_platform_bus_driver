@@ -1,4 +1,6 @@
 
+#define pr_fmt(fmt) SAMPLE_PLATFORM_DRV_NAME ": " fmt
+
 #include <linux/module.h>
 #include <linux/platform_device.h>
 
@@ -6,14 +8,14 @@
 
 static int sample_platform_probe(struct platform_device *pdev)
 {
-	PRINT_INFO("probed.\n");
+	pr_info("probed.\n");
 
 	return 0;
 }
 
 static int sample_platform_remove(struct platform_device *pdev)
 {
-	PRINT_INFO("removed.\n");
+	pr_info("removed.\n");
 
 	return 0;
 }
